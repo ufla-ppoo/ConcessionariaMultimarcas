@@ -1,4 +1,4 @@
-# Exercício Concessionária (Padrões de Projeto)
+# Concessionária Multimarcas
 
 Este projeto é utilizado em exercícios sobre Padrões de Projeto em disciplinas de Programação Orientada a Objetos.
 
