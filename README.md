@@ -4,6 +4,9 @@ Este projeto é utilizado em exercícios sobre Padrões de Projeto em disciplina
 
 ## Passo 1
 
+Este projeto representa uma concessionária de forma bem simplificada, pois a intenção é facilitar a resolução dos exercícios.
+Mas, especialmente para as perguntas reflexivas abaixo, considere como as classes seriam em um sistema completo, bem mais complexas e extensas, e responda pensando nisso.
+
 Execute o programa implementado neste projeto e teste todas as suas opções.
 
 Estude o projeto e veja que ele possui uma superclasse chamada `Carro` e subclasses para cada modelo de carro.
