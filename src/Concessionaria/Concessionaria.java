@@ -1,12 +1,12 @@
-package Concessionaria;
+package concessionaria;
 
 import fabricaautomoveis.carros.Carro;
 import fabricaautomoveis.carros.Categoria;
-import fabricaautomoveis.carros.Freemont;
+import fabricaautomoveis.carros.Toro;
 import fabricaautomoveis.carros.Gol;
 import fabricaautomoveis.carros.Marca;
 import fabricaautomoveis.carros.Strada;
-import fabricaautomoveis.carros.Uno;
+import fabricaautomoveis.carros.Argo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,13 +64,13 @@ public class Concessionaria {
             carro = new Gol(cor);
         }
         else if (marcaFranquia == Marca.FIAT && categoria == Categoria.POPULAR) {
-            carro = new Uno(cor);
+            carro = new Argo(cor);
         }
         else if (marcaFranquia == Marca.FIAT && categoria == Categoria.PICKUP) {
             carro = new Strada(cor);
         }
         else if (marcaFranquia == Marca.FIAT && categoria == Categoria.LUXO) {
-            carro = new Freemont(cor);
+            carro = new Toro(cor);
         }
         
         if (carro != null) {
