@@ -19,19 +19,19 @@ No passo anterior, vimos que a classe `Concessionaria` não tem os carros de tod
 Faça as alterações necessárias para que a classe `Concessionaria` consiga entregar modelos de Saveiro (Pickup da VW).
 Por enquanto não trate os carros de luxo.
 
-O que você achou das mudanças no código?
+O que você achou das mudanças no código? Lembrando que em um sistema completo, a classe `Concessionaria` seria a principal classe de regra de negócio do sistema.
 
-> -- escreva aqui sua resposta -- 
+> -- escreva aqui sua resposta --
 
 O que aconteceria se o carro popular da VW passasse a ser o UP!
 Que partes do código precisariam ser alteradas?
 
-> -- escreva aqui sua resposta -- 
+> -- escreva aqui sua resposta --
 
 O que aconteceria se quiséssemos agora comprar carros da Chevrolet?
 Que partes do código precisariam ser alteradas?
 
-> -- escreva aqui sua resposta -- 
+> -- escreva aqui sua resposta --
 
 ## Passo 3
 
@@ -45,7 +45,7 @@ Na aula teórica vimos que o **Padrão de Projeto Abstract Factory** é muito ú
 Com ele, nós poderemos criar carros de tipos diferentes, inclusive de marcas diferentes, sem precisarmos alterar o código da classe `Concessionaria` a cada novo modelo de carro.
 
 Faça então uma modelagem UML das alterações necessárias para implementar o Padrão de Projeto Abstract Factory, considerando duas fábricas concretas: VW e Fiat.
-Exporte a modelagem para o formato `png`e coloque o arquivo em uma pasta `doc` dentro da pasta principal do projeto, 
+Exporte a modelagem para o formato `png`e coloque o arquivo em uma pasta `doc` dentro da pasta principal do projeto,
 
 Dica: use um software de desenho qualquer para fazer a modelagem (preocupe-se apenas com uma visão geral das classes e dos métodos principais necessários).
 
@@ -55,15 +55,15 @@ Faça a implementação de acordo com a modelagem do exercício anterior.
 Crie as classes necessárias para tratar as marcas VW e Fiat.
 Teste suas alterações.
 
-O que aconteceria agora se o carro popular da VW passasse a ser o UP! 
+O que aconteceria agora se o carro popular da VW passasse a ser o UP!
 A classe Concessionaria precisaria ser alterada?
 
-> -- escreva aqui sua resposta -- 
+> -- escreva aqui sua resposta --
 
 O que aconteceria agora se quiséssemos agora comprar carros da Chevrolet?
 Quais partes do código precisariam ser alteradas?
 
-> -- escreva aqui sua resposta -- 
+> -- escreva aqui sua resposta --
 
 ## Passo 5
 
@@ -71,7 +71,7 @@ Faça agora as alterações necessárias para que nossa concessionária possa ve
 
 Quais mudanças foram necessárias na classe `Concessionaria`?
 
-> -- escreva aqui sua resposta -- 
+> -- escreva aqui sua resposta --
 
 ## Passo 6
 
