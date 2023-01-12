@@ -5,7 +5,7 @@ Este projeto é utilizado em exercícios sobre Padrões de Projeto em disciplina
 ## Passo 1
 
 Este projeto representa uma concessionária de forma bem simplificada, pois a intenção é facilitar a resolução dos exercícios.
-Mas, especialmente para as perguntas reflexivas abaixo, considere como as classes seriam em um sistema completo, bem mais complexas e extensas, e responda pensando nisso.
+Mas, especialmente **para as perguntas reflexivas** abaixo, **considere como as classes seriam em um sistema completo, bem mais complexas e extensas, e responda pensando nisso**.
 
 Execute o programa implementado neste projeto e teste todas as suas opções.
 
@@ -22,7 +22,7 @@ No passo anterior, vimos que a classe `Concessionaria` não tem os carros de tod
 Faça as alterações necessárias para que a classe `Concessionaria` consiga entregar modelos de Saveiro (Pickup da VW).
 Por enquanto não trate os carros de luxo.
 
-O que você achou das mudanças no código? Lembrando que em um sistema completo, a classe `Concessionaria` seria a principal classe de regra de negócio do sistema.
+O que você achou das mudanças no código? Lembrando que você deve considerar um sistema completo, no qual a classe `Concessionaria` seria a principal classe de regra de negócio do sistema, e, portanto, seria bem mais complexa.
 
 > -- escreva aqui sua resposta --
 
@@ -47,10 +47,41 @@ Se nós quiséssemos tratar uma nova marca (Chevrolet, por exemplo) teríamos qu
 Na aula teórica vimos que o **Padrão de Projeto Abstract Factory** é muito útil nessas situações.
 Com ele, nós poderemos criar carros de tipos diferentes, inclusive de marcas diferentes, sem precisarmos alterar o código da classe `Concessionaria` a cada novo modelo de carro.
 
-Faça então uma modelagem UML das alterações necessárias para implementar o Padrão de Projeto Abstract Factory, considerando duas fábricas concretas: VW e Fiat.
-Exporte a modelagem para o formato `png`e coloque o arquivo em uma pasta `doc` dentro da pasta principal do projeto,
+Faça então um diagrama de classes UML das alterações necessárias para implementar o Padrão de Projeto Abstract Factory, considerando duas fábricas concretas: VW e Fiat.
 
-Dica: use um software de desenho qualquer para fazer a modelagem (preocupe-se apenas com uma visão geral das classes e dos métodos principais necessários).
+### Dica sobre o Diagrama de Classes UML
+
+No diagrama, preocupe-se em representar apenas uma visão geral das classes e dos métodos principais necessários para demonstrar a aplicação do padrão de projeto
+
+Para fazer o diagrama você pode optar por usar:
+
+- um software qualquer (como o `Dia`).
+- ou um algum editor online como o https://www.diagrameditor.com/
+- ou ainda usar o `Mermaid` que permite fazer o diagrama aqui mesmo, diretamente no arquivo README do projeto.
+
+Caso use um software ou um editor online, exporte a modelagem para o formato `png` e coloque o arquivo em uma pasta `doc` dentro da pasta principal do projeto.
+
+Já para usar o `Mermaid`, instale a extensão `Markdown Preview Mermaid Support` no VS Code e altere a descrição abaixo, seguindo a sintaxe do Mermaid para Diagramas de Classes UML (veja a [documentação da sintaxe](https://mermaid.js.org/syntax/classDiagram.html)).
+
+```mermaid
+---
+title: Diagrama de Classes UML (incompleto)
+---
+classDiagram
+    App --> InterfaceUsuario
+    InterfaceUsuario *-- Concessionaria
+    Concessionaria --> GeradorDePlaca
+    Concessionaria *-- Carro
+    Concessionaria *-- Argo
+    Concessionaria *-- Gol
+    Concessionaria *-- Strada
+    Concessionaria *-- Toro
+    Carro <|-- Argo
+    Carro <|-- Gol
+    Carro <|-- Strada
+    Carro <|-- Toro
+    Concessionaria : +comprarCarro(Categoria,String)
+```
 
 ## Passo 4
 
