@@ -6,13 +6,14 @@ public abstract class Carro {
     private double custo;
     private Categoria categoria;
     private Marca marca;
+    private String placa;
     
-    public Carro(String nome, Marca marca, String cor, double custo, Categoria categoria) {        
+    public Carro(String nome, Marca marca, String cor, double custo, Categoria categoria) {
         this.nome = nome;
         this.marca = marca;
         this.cor = cor;
         this.custo = custo;
-        this.categoria = categoria;        
+        this.categoria = categoria;
     }
     
     public String obterNome() {
@@ -31,28 +32,39 @@ public abstract class Carro {
         return cor;
     }
     
+    public String obterPlaca() {
+        return placa;
+    }
+    
     @Override
     public String toString() {
-        return marca + " " + nome + " " + cor + " (R$ " + custo + ")";
+        String descricao = marca + " " + nome + " " + cor;
+        if (placa == null) {
+            descricao += " sem placa";
+        }
+        else {
+            descricao += " placa " + placa;
+        }
+        return  descricao + " (R$ " + custo + ")";
     }
-    
-    public void produzir() {
-        // simula o processo de produção do carro
-        System.out.println("\nProduzindo o carro: " + this + "...\n");
-        
+
+    public void emplacar(String placa) {
+        // simula o processo de emplacamento do carro
+        System.out.println("\nEmplacando o carro: " + this + "...");
         esperar();
+        this.placa = placa;
     }
     
-    public void pintar() {
-        // simula o processo de pintura do carro
-        System.out.println("Pintando o carro: " + this + "...\n");
+    public void prepararParaEntrega() {
+        // simula o processo de preparação do carro para entrega
+        System.out.println("\nPreparando carro para entrega: " + this + "...");
         
         esperar();
     }
     
     public void liberarDocumentacao() {
-        // simula o processo de produção do carro
-        System.out.println("Liberando documentação do carro: " + this + "...\n");
+        // simula o processo de liberar a documentação do carro
+        System.out.println("\nLiberando documentação do carro: " + this + "...");
         
         esperar();
     }

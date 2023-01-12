@@ -10,6 +10,8 @@ import fabricaautomoveis.carros.Argo;
 import java.util.ArrayList;
 import java.util.List;
 
+import detran.GeradorDePlaca;
+
 /**
  * Representa uma concessionária que vende carros de uma determinada Marca.
  */
@@ -74,8 +76,8 @@ public class Concessionaria {
         }
         
         if (carro != null) {
-            carro.produzir();
-            carro.pintar();
+            carro.emplacar(GeradorDePlaca.gerarPlaca());
+            carro.prepararParaEntrega();
             carro.liberarDocumentacao();
             carros.add(carro);
             return true;
