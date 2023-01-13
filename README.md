@@ -49,9 +49,9 @@ Com ele, nós poderemos criar carros de tipos diferentes, inclusive de marcas di
 
 Faça então um diagrama de classes UML das alterações necessárias para implementar o Padrão de Projeto Abstract Factory, considerando duas fábricas concretas: VW e Fiat.
 
-### Dica sobre o Diagrama de Classes UML
+#### Dicas sobre o Diagrama de Classes UML
 
-No diagrama, preocupe-se em representar apenas uma visão geral das classes e dos métodos principais necessários para demonstrar a aplicação do padrão de projeto
+No diagrama, preocupe-se em representar apenas uma visão geral das classes e dos métodos principais necessários para demonstrar a aplicação do padrão de projeto solicitado.
 
 Para fazer o diagrama você pode optar por usar:
 
@@ -59,14 +59,14 @@ Para fazer o diagrama você pode optar por usar:
 - ou um algum editor online como o https://www.diagrameditor.com/
 - ou ainda usar o `Mermaid` que permite fazer o diagrama aqui mesmo, diretamente no arquivo README do projeto.
 
-Caso use um software ou um editor online, exporte a modelagem para o formato `png` e coloque o arquivo em uma pasta `doc` dentro da pasta principal do projeto.
+Caso use um software ou um editor online, exporte a modelagem para uma imagem no formato `png` e coloque o arquivo em uma pasta `doc` dentro da pasta principal do projeto.
 
-Já para usar o `Mermaid`, instale a extensão `Markdown Preview Mermaid Support` no VS Code e altere a descrição abaixo, seguindo a sintaxe do Mermaid para Diagramas de Classes UML (veja a [documentação da sintaxe](https://mermaid.js.org/syntax/classDiagram.html)).
+Já o `Mermaid` é interessante pois o GitHub possui uma integração com ele que permite exibir um diagrama de classes UML em um arquivo Markdown, como este arquivo README.
+Para isso, basta "escrever" o diagrama de classes usando a [sintaxe](https://mermaid.js.org/syntax/classDiagram.html) do `Mermaid`, como no exemplo abaixo (que é um diagrama *incompleto* do projeto).
+
+> Obs.: Para que você consiga visualizar o Diagrama de Classes dentro do VS Code, instale a extensão `Markdown Preview Mermaid Support` e acesse a visualização do arquivo README.md (atalho Ctrl+Shift+V).
 
 ```mermaid
----
-title: Diagrama de Classes UML (incompleto)
----
 classDiagram
     App --> InterfaceUsuario
     InterfaceUsuario *-- Concessionaria
