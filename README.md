@@ -19,19 +19,19 @@ Em seguida, mude a marca da franquia da `Concessionaria`, alterando a chamada do
 
 No passo anterior, vimos que a classe `Concessionaria` não tem os carros de todas as categorias para a Marca VW.
 
-Faça as alterações necessárias para que a classe `Concessionaria` consiga entregar modelos de Saveiro (Pickup da VW).
-Por enquanto não trate os carros de luxo.
+Faça as alterações necessárias para que a classe `Concessionaria` consiga entregar modelos de Saveiro (Caminhonete da VW).
+Por enquanto não trate os carros da categoria superior.
 
 O que você achou das mudanças no código? Lembrando que você deve considerar um sistema completo, no qual a classe `Concessionaria` seria a principal classe de regra de negócio do sistema, e, portanto, seria bem mais complexa.
 
 > -- escreva aqui sua resposta --
 
-O que aconteceria se o carro popular da VW passasse a ser o UP!
+O que aconteceria se o carro de entrada da VW passasse a ser o UP!
 Que partes do código precisariam ser alteradas?
 
 > -- escreva aqui sua resposta --
 
-O que aconteceria se quiséssemos agora comprar carros da Chevrolet?
+O que aconteceria se quiséssemos agora comprar carros da Renault?
 Que partes do código precisariam ser alteradas?
 
 > -- escreva aqui sua resposta --
@@ -42,7 +42,7 @@ Veja que no passo anterior, nós acabamos mudando o código da classe `Concessio
 Isso está acontecendo porque nossa classe está dependendo de classes concretas (ou seja, depende da criação de objetos de tipos específicos).
 
 Seguindo os _Princípios de Design_ que aprendemos, o ideal é que nossas classes sejam _abertas para extensão e fechadas para modificação_.
-Se nós quiséssemos tratar uma nova marca (Chevrolet, por exemplo) teríamos que fazer ainda mais modificações na classe `Concessionaria`.
+Se nós quiséssemos tratar uma nova marca (Renault, por exemplo) teríamos que fazer ainda mais modificações na classe `Concessionaria`.
 
 Na aula teórica vimos que o **Padrão de Projeto Abstract Factory** é muito útil nessas situações.
 Com ele, nós poderemos criar carros de tipos diferentes, inclusive de marcas diferentes, sem precisarmos alterar o código da classe `Concessionaria` a cada novo modelo de carro.
@@ -73,11 +73,11 @@ classDiagram
     Concessionaria --> GeradorDePlaca
     Concessionaria *-- Carro
     Concessionaria *-- Argo
-    Concessionaria *-- Gol
+    Concessionaria *-- Polo
     Concessionaria *-- Strada
     Concessionaria *-- Toro
     Carro <|-- Argo
-    Carro <|-- Gol
+    Carro <|-- Polo
     Carro <|-- Strada
     Carro <|-- Toro
     Concessionaria : +comprarCarro(Categoria,String)
@@ -89,19 +89,19 @@ Faça a implementação de acordo com a modelagem do exercício anterior.
 Crie as classes necessárias para tratar as marcas VW e Fiat.
 Teste suas alterações.
 
-O que aconteceria agora se o carro popular da VW passasse a ser o UP!
+O que aconteceria agora se o carro de entrada da VW passasse a ser o UP!
 A classe Concessionaria precisaria ser alterada?
 
 > -- escreva aqui sua resposta --
 
-O que aconteceria agora se quiséssemos agora comprar carros da Chevrolet?
+O que aconteceria agora se quiséssemos agora comprar carros da Renault?
 Quais partes do código precisariam ser alteradas?
 
 > -- escreva aqui sua resposta --
 
 ## Passo 5
 
-Faça agora as alterações necessárias para que nossa concessionária possa vender carros da Chevrolet.
+Faça agora as alterações necessárias para que nossa concessionária possa vender carros da Renault.
 
 Quais mudanças foram necessárias na classe `Concessionaria`?
 

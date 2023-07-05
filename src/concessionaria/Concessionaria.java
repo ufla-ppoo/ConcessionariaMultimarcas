@@ -3,7 +3,7 @@ package concessionaria;
 import fabricaautomoveis.carros.Carro;
 import fabricaautomoveis.carros.Categoria;
 import fabricaautomoveis.carros.Toro;
-import fabricaautomoveis.carros.Gol;
+import fabricaautomoveis.carros.Polo;
 import fabricaautomoveis.carros.Marca;
 import fabricaautomoveis.carros.Strada;
 import fabricaautomoveis.carros.Argo;
@@ -62,16 +62,16 @@ public class Concessionaria {
     public boolean comprarCarro(Categoria categoria, String cor) {
         Carro carro = null;
         
-        if (marcaFranquia == Marca.VW && categoria == Categoria.POPULAR) {
-            carro = new Gol(cor);
+        if (marcaFranquia == Marca.VW && categoria == Categoria.ENTRADA) {
+            carro = new Polo(cor);
         }
-        else if (marcaFranquia == Marca.FIAT && categoria == Categoria.POPULAR) {
+        else if (marcaFranquia == Marca.FIAT && categoria == Categoria.ENTRADA) {
             carro = new Argo(cor);
         }
-        else if (marcaFranquia == Marca.FIAT && categoria == Categoria.PICKUP) {
+        else if (marcaFranquia == Marca.FIAT && categoria == Categoria.CAMINHONETE) {
             carro = new Strada(cor);
         }
-        else if (marcaFranquia == Marca.FIAT && categoria == Categoria.LUXO) {
+        else if (marcaFranquia == Marca.FIAT && categoria == Categoria.SUPERIOR) {
             carro = new Toro(cor);
         }
         

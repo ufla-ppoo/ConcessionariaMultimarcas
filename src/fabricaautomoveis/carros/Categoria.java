@@ -5,9 +5,9 @@ package fabricaautomoveis.carros;
  */
 public enum Categoria {
     
-    POPULAR(1), 
-    PICKUP(2), 
-    LUXO(3);
+    ENTRADA(1), 
+    CAMINHONETE(2), 
+    SUPERIOR(3);
     
     private int id;
     

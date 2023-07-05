@@ -51,7 +51,7 @@ public class InterfaceUsuario {
     private void comprarCarro() {        
         System.out.println("Concessionaria vende carros da: " + ppooVeiculos.getMarcaFranquia());        
         
-        System.out.print("Escolha a categoria (1: Popular, 2: Pickup ou 3: Luxo): ");
+        System.out.print("Escolha a categoria (1: Entrada, 2: Caminhonete ou 3: Superior): ");
         Categoria categoria = Categoria.peloID(Integer.parseInt(entrada.nextLine()));
         
         System.out.print("Escolha a cor: ");
