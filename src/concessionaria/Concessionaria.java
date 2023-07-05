@@ -7,8 +7,8 @@ import fabricaautomoveis.carros.Gol;
 import fabricaautomoveis.carros.Marca;
 import fabricaautomoveis.carros.Strada;
 import fabricaautomoveis.carros.Argo;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import detran.GeradorDePlaca;
 
@@ -19,7 +19,7 @@ public class Concessionaria {
     // Nome da concessionária
     private String nome;
     // Carros da concessionária
-    private List<Carro> carros;
+    private Map<String, Carro> carros;
     // Marca da qual a concessionária vende os carros
     private Marca marcaFranquia;
     
@@ -31,7 +31,7 @@ public class Concessionaria {
     public Concessionaria(String nome, Marca marca) {
         this.nome = nome;        
         this.marcaFranquia = marca;
-        carros = new ArrayList<>();
+        carros = new HashMap<>();
     }
     
     /**
@@ -79,7 +79,7 @@ public class Concessionaria {
             carro.emplacar(GeradorDePlaca.gerarPlaca());
             carro.prepararParaEntrega();
             carro.liberarDocumentacao();
-            carros.add(carro);
+            carros.put(carro.obterNome(),  carro);
             return true;
         }
         else {
